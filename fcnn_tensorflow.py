@@ -49,7 +49,7 @@ if __name__ == "__main__":
     x_test, y_test = generate_training_data((100, 2))
 
     predictions = np.concatenate([sess.run(y_pred, feed_dict={x: x_test[i, :][np.newaxis, :]})[0] for i in range(x_test.shape[0])])
-    print(np.vstack((y_test, predictions)).T)
+    #print(np.vstack((y_test, predictions)).T)
 
     print("Loss: {}".format(sess.run(tf.losses.mean_squared_error(labels=y_test, predictions=predictions))))
 

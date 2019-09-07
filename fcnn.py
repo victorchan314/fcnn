@@ -120,7 +120,7 @@ class NeuralNetwork:
 if __name__ == "__main__":
     x_data = generate_training_data((25000, 2))
     y_data = f(x_data)
-    nn = NeuralNetwork(2, 1, [10] * 3, alpha=1e-7)
+    nn = NeuralNetwork(2, 1, [10] * 3, alpha=5e-7)
     for i in range(x_data.shape[0]):
         x = x_data[i, :]
         y = y_data[i]
